@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Opus 4.6 / 4.7 / 4.8 タスク別パラメータ比較</title>
+  <desc id="desc">7種類の検証プロンプトに対する Claude Opus 4.6、4.7、4.8 の評価傾向をレーダーチャートで比較。</desc>
+  <defs>
+    <style>
+      .bg { fill: #fafafa; }
+      .title { fill: #3f3f46; font: 700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; letter-spacing: 0; }
+      .axis-label { fill: #3f3f46; font: 600 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; letter-spacing: 0; }
+      .tick { fill: #777; font: 500 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; letter-spacing: 0; }
+      .legend { fill: #111827; font: 600 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; letter-spacing: 0; }
+      .note { fill: #71717a; font: 500 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; letter-spacing: 0; }
+      .grid { fill: none; stroke: #d6d3d1; stroke-width: 1.4; }
+      .spoke { stroke: #d6d3d1; stroke-width: 1.4; }
+      .blue { stroke: #2f7dd3; fill: #2f7dd3; }
+      .green { stroke: #19b37f; fill: #19b37f; }
+      .orange { stroke: #f2a000; fill: #f2a000; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1000" height="1000"/>
+  <text x="500" y="42" text-anchor="middle" class="title">タスク別パラメータ比較</text>
+
+  <!-- chart center: 550,360 radius:260 -->
+  <g id="radar" transform="translate(-50 0)">
+    <polygon class="grid" points="550.0,295.0 600.8,319.5 613.4,374.5 578.2,418.6 521.8,418.6 486.6,374.5 499.2,319.5"/>
+    <polygon class="grid" points="550.0,230.0 651.6,278.9 676.7,388.9 606.4,477.1 493.6,477.1 423.3,388.9 448.4,278.9"/>
+    <polygon class="grid" points="550.0,165.0 702.5,238.4 740.1,403.4 634.6,535.7 465.4,535.7 359.9,403.4 397.5,238.4"/>
+    <polygon class="grid" points="550.0,100.0 753.3,197.9 803.5,417.9 662.8,594.3 437.2,594.3 296.5,417.9 346.7,197.9"/>
+
+    <line class="spoke" x1="550" y1="360" x2="550.0" y2="100.0"/>
+    <line class="spoke" x1="550" y1="360" x2="753.3" y2="197.9"/>
+    <line class="spoke" x1="550" y1="360" x2="803.5" y2="417.9"/>
+    <line class="spoke" x1="550" y1="360" x2="662.8" y2="594.3"/>
+    <line class="spoke" x1="550" y1="360" x2="437.2" y2="594.3"/>
+    <line class="spoke" x1="550" y1="360" x2="296.5" y2="417.9"/>
+    <line class="spoke" x1="550" y1="360" x2="346.7" y2="197.9"/>
+
+    <text x="578" y="107" class="tick">100%</text>
+    <text x="571" y="171" class="tick">75</text>
+    <text x="571" y="236" class="tick">50</text>
+    <text x="571" y="301" class="tick">25</text>
+
+    <text x="550" y="74" text-anchor="middle" class="axis-label">リファクタ</text>
+    <text x="770" y="192" class="axis-label">オンボーディング</text>
+    <text x="840" y="425" class="axis-label">障害調査</text>
+    <text x="690" y="648" class="axis-label">PRレビュー</text>
+    <text x="410" y="648" text-anchor="end" class="axis-label">Go/No-Go</text>
+    <text x="260" y="425" text-anchor="end" class="axis-label">Setup Health</text>
+    <text x="330" y="192" text-anchor="end" class="axis-label">大規模設計</text>
+
+    <!-- Opus 4.6 -->
+    <polygon points="550.0,185.8 714.7,228.7 760.4,408.0 641.4,549.7 456.4,554.4 321.9,412.1 367.1,214.1"
+      fill="#2f7dd3" fill-opacity="0.10" stroke="#2f7dd3" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle class="blue" cx="550.0" cy="185.8" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="blue" cx="714.7" cy="228.7" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="blue" cx="760.4" cy="408.0" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="blue" cx="641.4" cy="549.7" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="blue" cx="456.4" cy="554.4" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="blue" cx="321.9" cy="412.1" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="blue" cx="367.1" cy="214.1" r="7" stroke="#ffffff" stroke-width="3"/>
+
+    <!-- Opus 4.8 -->
+    <polygon points="550.0,196.2 741.1,207.6 783.2,413.2 656.0,580.2 437.2,594.3 306.7,415.5 346.7,197.9"
+      fill="#f2a000" fill-opacity="0.13" stroke="#f2a000" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle class="orange" cx="550.0" cy="196.2" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="orange" cx="741.1" cy="207.6" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="orange" cx="783.2" cy="413.2" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="orange" cx="656.0" cy="580.2" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="orange" cx="437.2" cy="594.3" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="orange" cx="306.7" cy="415.5" r="7" stroke="#ffffff" stroke-width="3"/>
+    <circle class="orange" cx="346.7" cy="197.9" r="7" stroke="#ffffff" stroke-width="3"/>
+
+    <!-- Opus 4.7 -->
+    <polygon points="550.0,115.6 749.2,201.1 798.4,416.7 660.6,589.6 441.7,584.9 301.6,416.7 354.9,204.4"
+      fill="#19b37f" fill-opacity="0.14" stroke="#19b37f" stroke-width="4.5" stroke-linejoin="round"/>
+    <circle class="green" cx="550.0" cy="115.6" r="8" stroke="#ffffff" stroke-width="3"/>
+    <circle class="green" cx="749.2" cy="201.1" r="8" stroke="#ffffff" stroke-width="3"/>
+    <circle class="green" cx="798.4" cy="416.7" r="8" stroke="#ffffff" stroke-width="3"/>
+    <circle class="green" cx="660.6" cy="589.6" r="8" stroke="#ffffff" stroke-width="3"/>
+    <circle class="green" cx="441.7" cy="584.9" r="8" stroke="#ffffff" stroke-width="3"/>
+    <circle class="green" cx="301.6" cy="416.7" r="8" stroke="#ffffff" stroke-width="3"/>
+    <circle class="green" cx="354.9" cy="204.4" r="8" stroke="#ffffff" stroke-width="3"/>
+  </g>
+
+  <g transform="translate(150 750)">
+    <circle class="blue" cx="0" cy="0" r="10"/>
+    <text x="28" y="8" class="legend">Opus 4.6</text>
+    <circle class="green" cx="300" cy="0" r="10"/>
+    <text x="328" y="8" class="legend">Opus 4.7</text>
+    <circle class="orange" cx="560" cy="0" r="10"/>
+    <text x="588" y="8" class="legend">Opus 4.8</text>
+  </g>
+</svg>
